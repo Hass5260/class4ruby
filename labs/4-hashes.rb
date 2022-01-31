@@ -22,7 +22,13 @@ weather_data = {
     conditions: "Sunny"
   },
   forecast: [
-    { temperature: 65, conditions: "Mostly Cloudy" },
-    { temperature: 70, conditions: "Partly Cloudy" }
+    { temperature: 15, conditions: "Mostly Cloudy" },
+    { temperature: 90, conditions: "Partly Cloudy" }
   ]
 }
+current_temp = weather_data[:current][:temperature]
+current_conditions = weather_data[:current][:conditions]
+
+puts "Currently it is #{current_temp} degrees and #{current_conditions}. 
+Tomorrow it will be #{weather_data[:forecast][0][:temperature]} and #{weather_data[:forecast][0][:conditions]}. 
+The next day we will see #{weather_data[:forecast][1][:conditions]} skies, with a temperature of #{weather_data[:forecast][1][:temperature]}."
